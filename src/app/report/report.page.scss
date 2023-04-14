@@ -1,0 +1,17 @@
+ion-content {
+    --background: linear-gradient(#f56bd1, #321f8e);
+    font-family: 'Bubblegum Sans', cursive;
+  }
+  
+  ion-button{
+    --background: purple;
+    --box-shadow: 5px 5px 1px rgba(129, 69, 160, 0.8);
+    --color: white;
+    font-family: 'Bubblegum Sans', cursive;
+    margin-top: 10px;
+    border-radius: 50px;
+  }
+  
+  ion-item{
+    --background: transparent;
+  }

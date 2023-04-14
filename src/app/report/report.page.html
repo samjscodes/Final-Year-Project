@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>      
+    </ion-buttons>
+    <ion-title><center>Feedback/report</center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="reportForm">
+  <center><h1 class="title">Report an Issue</h1></center>
+  <div class="formWrapper">
+
+    <ion-item lines="none" class="input-field">
+      <ion-label>Name</ion-label>
+      <ion-input type="text" name="name"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-label>Email</ion-label>
+      <ion-input type="text" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" class="input-field">
+      <ion-label>Subject</ion-label>
+      <ion-input type="text" name="subject"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" class="input-field">
+      <ion-label>Description</ion-label>
+      <ion-textarea name="description"></ion-textarea>
+    </ion-item>
+    
+    <ion-button expand="block" class="submit-btn" shape="round" id="report-submit-btn" (click)="onReportSubmit()">Submit</ion-button>
+  
+  <div class="feedbackWrapper">
+    <center><h1 class="title">Feedback</h1></center>
+    <ion-item lines="none" class="input-field">
+      <ion-label>Name</ion-label>
+      <ion-input type="text" name="name"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="input-field">
+      <ion-label>Email</ion-label>
+      <ion-input type="text" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" class="input-field">
+      <ion-label>Feedback</ion-label>
+      <ion-textarea name="feedback"></ion-textarea>
+    </ion-item>
+    <ion-button expand="block" class="submit-btn" shape="round" id="report-submit-btn" (click)="onReportSubmit()">Submit</ion-button>
+</div>
+
+  </div>
+</ion-content>

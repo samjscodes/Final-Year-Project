@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><center>Activity List</center></ion-title>
+  </ion-toolbar> 
+</ion-header>
+
+<ion-content class="activityList">
+  <p>Please select the hobbies to implement:</p>
+  <div class="hobby-buttons">
+    <ion-button class="hobby-button" *ngFor="let hobby of hobbies" [ngClass]="{'selected': selectedHobbies[hobby]}" (click)="selectedHobbies[hobby] = !selectedHobbies[hobby]; updateSelectionCount($event)">
+      {{ hobby }}
+    </ion-button>
+  </div>
+  <p *ngIf="selectionCount === 0">Please select at least one hobby.</p>
+  <p *ngIf="selectionCount > 3">You can only select up to 3 hobbies.</p>
+  <div *ngIf="selectionCount <= 3">
+    <p>Selected hobbies: {{ selectionCount }}/3</p>
+    <ion-button [disabled]="selectionCount === 0" (click)="saveSelections(); navigateToInstructionsGoals()" shape="round">Next</ion-button>
+  </div>
+</ion-content>

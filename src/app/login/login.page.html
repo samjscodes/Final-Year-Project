@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><center>Log In</center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="loginForm">
+  <h1 class="title">GoalMinder</h1>
+  <img src="../../assets/catIcon2.gif" alt="catIcon2">
+  <div class="loginWrapper">
+
+    <ion-item lines="none" class="input-field">
+      <ion-label>Email</ion-label>
+      <ion-input type="text" name="email"></ion-input>
+    </ion-item>
+    
+    <ion-item lines="none" class="input-field">
+      <ion-label>Password</ion-label>
+      <ion-input type="password" name="password"></ion-input>
+    </ion-item>
+    
+    <ion-button [routerLink]="['/activity-list']" expand="block" class="signin-btn" shape="round">Sign In</ion-button>
+  </div>
+</ion-content>

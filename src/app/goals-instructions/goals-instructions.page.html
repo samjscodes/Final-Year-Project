@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>      
+    </ion-buttons>
+    <ion-title><center>Goals</center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+    <div class="pageTitle"><h1>Your Goals and Intentions</h1></div>
+    <div class="notebook-container">
+    <img src="notepad.jpg" alt="Notebook Image">
+  </div>
+  <div class="goals-text">
+    <div class="rounded-box">
+      <p>Your goals are important,<br> and this page is dedicated to helping you achieve them.<br> Write them down and take the first step towards success!</p>
+    </div>    
+  </div>
+  <ion-button id="next" [routerLink]="['/goals']" expand="block" shape="round" color="danger">Got it!</ion-button>
+  
+</ion-content>

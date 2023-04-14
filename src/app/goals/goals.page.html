@@ -1,0 +1,25 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>      
+    </ion-buttons>
+    <ion-title><center>Goals</center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="goalsPage">
+  <ion-content class="goals-page">
+    <div class="notepad-container">
+      <div class="notepad-header">My Goals</div>
+      <div class="notepad-content" contenteditable="true"></div>
+      <ion-button expand="block" shape="round" (click)="saveGoals(); next()">Save and Next!</ion-button>
+     <center><img src="../../assets/catIcon4.gif" alt="catIcon4"> </center>
+     <div class="quotes">
+      <p class="quote" *ngFor="let quote of quotes; let i = index">{{quote}}</p>
+    </div>    
+    </div>
+  </ion-content>
+</ion-content>

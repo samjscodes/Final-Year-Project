@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>      
+    </ion-buttons>
+    <ion-title><center>Main Page</center></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="icon-container">
+    <img src="../../assets/goalIcon.png" alt="goals" class="icon" (click)="goToGoalsPage()">
+    <img src="../../assets/activities.PNG" alt="activities" class="icon" (click)="goToActivitiesPage()">
+    <img src="../../assets/report.png" alt="report" class="icon" (click)="goToReportPage()">
+    <img src="../../assets/settings.png" alt="settings" class="icon" (click)="goToSettingsPage()">
+  </div>
+
+  <ion-item [ngClass]="{'one-task': selectedHobbies.length === 1, 'two-tasks': selectedHobbies.length === 2, 'three-tasks': selectedHobbies.length === 3}" *ngFor="let hobby of selectedHobbies">
+    <div class="cloud-container">
+      <img src="../../assets/cloud.png" alt="cloud" class="cloud">
+      <h2>{{ hobby }}</h2>
+      <p>{{ getFirstTask(hobby) }}</p>
+      <img src="../../assets/check.png" class="check" (click)="goToNextTask(hobby)" />
+    </div>
+  </ion-item>
+  <button (click)="displayRandomQuote()" style="background-color: transparent;">
+    <img src="../../assets/notification.png" alt="Bell icon" style="height: 40px;">
+  </button>
+   
+  <div class="motivational-quote" *ngIf="displayQuote">
+    <p>{{displayQuote}}</p>
+  </div>
+
+  <ion-icon name="information-circle" (click)="openInfoModal()"></ion-icon>
+
+  
+  
+</ion-content>
+
+
