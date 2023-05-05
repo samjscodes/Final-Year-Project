@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center-title">Goals</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="goalsPage">
+  <ion-content class="goals-page">
+    <h1 class="goalMinder">GoalMinder</h1>
+        <div class="notepad-container">
+      <div class="notepad-content" contenteditable="true"></div>
+      <ion-button expand="block" shape="round" (click)="saveGoals(); next()">Save and Next!</ion-button>
+      <img src="../../assets/catIcon4.gif" alt="catIcon4">
+     <div class="quotes">
+    </div>    
+    </div>
+  </ion-content>
+</ion-content>

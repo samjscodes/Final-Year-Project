@@ -1,0 +1,117 @@
+.center-title {
+  text-align: center;
+}
+
+ion-content.goals-page {
+  --background: linear-gradient(#f56bd1, #321f8e);
+}
+
+.notepad-container {
+  width: 100%;
+  overflow-y: auto;
+  background: linear-gradient(#f56bd1, #321f8e);
+  padding-top: 70px;
+}
+
+.goalMinder{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0.125em 0.125em 0.25 rgba(0, 0, 0, 0.5);
+  z-index: -3;
+  top: 1em;
+}
+
+.notepad-content {
+  margin: 2em;
+  margin-top: -3.3em;
+  min-height: 18.75em;
+  max-height: 12.5em; 
+  border: 0.625em solid purple;
+  border-style: dashed double;
+  padding: 0.313em;
+  color: var(--ion-color-base);
+  line-height: 1.5;
+  background-color: rgb(207, 178, 10);
+  outline: none;
+  color: black;
+  font-family: 'Calligraffitti', cursive;
+  font-size: 1.25em;
+  overflow-y: scroll; 
+}
+
+img{
+  width: 10em;
+  position: relative;
+  z-index: 1;
+  margin-left: 5.625em;
+}
+
+ion-button {
+  margin-top: 1.25em;
+  font-family: 'Bubblegum Sans', cursive;
+  --background: purple;
+}
+
+ion-button:hover {
+  --background: rgb(211, 95, 226);
+}
+
+.quotes {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 1em;
+  font-family: 'Bubblegum Sans', cursive;
+  z-index: 2;
+  color: white;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  5% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+

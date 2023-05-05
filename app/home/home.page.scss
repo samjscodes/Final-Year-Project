@@ -1,0 +1,46 @@
+.center-title {
+  text-align: center;
+}
+
+.title{
+  font-size: 1rem;
+}
+
+.quote{
+  font-family: 'Bubblegum Sans', cursive;
+  text-align: center;
+}
+.auth-form ion-grid,
+.auth-form ion-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(#f56bd1, #321f8e);
+  font-size: 1.5em;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.auth-form{
+  top: 0%;
+}
+
+img{
+  margin-top: 0.8em;
+}
+
+ion-button {
+  --background: rgb(167, 0, 167);
+  --box-shadow: 0.4em 0.313em 0.063em rgba(129, 69, 160, 0.8);
+  --color: white;
+  font-family: 'Bubblegum Sans', cursive;
+  margin-top: 1.25em;
+  border-radius: 3.125em;
+}
+
+.unclickable-button {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+

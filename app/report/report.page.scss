@@ -1,0 +1,72 @@
+ion-header {
+  --background: linear-gradient(#f56bd1, #321f8e);
+}
+
+ion-content {
+  --background: linear-gradient(#f56bd1, #321f8e);
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-top: 1.5em;
+}
+
+label {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+}
+
+input, textarea {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  border-radius: 0.3em;
+  border: none;
+  box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.3);
+  font-size: 1.2em;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+button {
+  padding: 0.5em 1.5em;
+  margin-top: 1.5em;
+  border-radius: 0.3em;
+  border: none;
+  box-shadow: 0 0.2em 0.5em rgba(0,0,0,0.3);
+  background-color: white;
+  color: #f56bd1;
+  font-size: 1.2em;
+  font-family: 'Bubblegum Sans', cursive;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f56bd1;
+  color: white;
+}
+
+.confirmation-message {
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+}

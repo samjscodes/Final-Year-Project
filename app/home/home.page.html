@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="center-title">Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <h1 class="title">GoalMinder</h1>
+      <h5 class="quote">From Goals to Habits with GoalMinder- Your path to success</h5>
+      <img src="../../assets/catIcon1.gif" alt="catIcon1">
+      <ion-col align-self-center>
+        <div class="auth-box">
+          <ion-button [routerLink]="['/login']" expand="block" shape="round">Log in</ion-button>
+          <ion-button disable class="signup" expand="block" shape="round">Sign up</ion-button>
+        </div> 
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

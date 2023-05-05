@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="center-title">Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label>Volume</ion-label>
+      <ion-range min="0" max="1" step="0.1" [(ngModel)]="audioVolume" color="primary" (ionChange)="onVolumeChange($event)"></ion-range>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button (click)="onPauseAudio()" shape="round" expand="block">Pause Audio</ion-button>
+      <ion-button (click)="onPlayAudio()" shape="round" expand="block">Play Audio</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

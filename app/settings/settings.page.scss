@@ -1,0 +1,22 @@
+.center-title {
+  text-align: center;
+}
+ion-content {
+  --background: linear-gradient(#f56bd1, #321f8e);
+}
+
+ion-range {
+  --bar-background-active: #fff;
+  --knob-background: #fff;
+  --background: linear-gradient(#f56bd1, #321f8e);
+}
+
+ion-button{
+  --background: purple;
+  --box-shadow: 0.313em 0.313em 0.063em rgba(129, 69, 160, 0.8);
+  --color: white;
+  font-family: 'Bubblegum Sans', cursive;
+  margin-top: 1.25em;
+  border-radius: 3.125em;
+  align-items: center;
+}

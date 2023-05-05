@@ -1,0 +1,44 @@
+.center-title {
+    text-align: center;
+  }
+.activityList{
+    --background: linear-gradient(#f56bd1, #321f8e);
+    font-size: 1.125em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: black;
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+  }
+  
+  .hobby-button {
+    font-family: 'Bubblegum Sans', cursive;
+    margin: 0.313em;
+    padding: 0.625em;
+    --border-radius: 3.125em;
+    border-color: black;
+    --color: black;
+    --background: #f56bd1;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hobby-button.selected {
+    --background: purple;
+    --box-shadow: 0.313em 0.313em 0.063em rgba(129, 69, 160, 0.8);
+    --color: white;
+    font-family: 'Bubblegum Sans', cursive;
+    margin-top: 1.25em;
+    --border-radius: 3.125em;
+  }
+  
+  .nextBtn {
+    --background: #E66408;
+    --color: white;
+    font-family: 'Bubblegum Sans', cursive;
+    box-shadow: 0.313em 0.313em 0.063em orange(140, 54, 0, 0.8);
+  }
+  

@@ -1,0 +1,75 @@
+.center-title {
+  text-align: center;
+}
+
+.goalMinder{
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0.125em 0.125em 0.25 rgba(0, 0, 0, 0.5);
+  z-index: -3;
+}
+ion-content{
+    --background: linear-gradient(#f56bd1, #321f8e);
+    font-size: 1.125em;
+    color: white;
+    height: 100%;
+  }
+
+.diary-page {
+    background-image: url('../../assets/notepad.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    position: relative;
+    }
+  
+  img {
+    height: 21.875em;
+  }
+  
+  
+  .notebook-container {
+    margin-top: 5em;
+    margin-bottom: 1.25em;
+  }
+
+  .pageTitle {
+    margin-top: 2.5em;
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .diary-page:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    z-index: 1; 
+  }
+  
+  .rounded-box {
+    background-color: rgb(219, 15, 66);
+    border-radius: 0.625em;
+    border: 0.063em solid #ccc;
+    padding: 1.25em;
+    max-width: 43.75em;
+    max-height: 43.75em;
+    height: 30%;
+    width: 99%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+  }
+  
+  
