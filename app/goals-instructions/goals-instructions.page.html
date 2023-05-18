@@ -3,20 +3,26 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title class="center-title">Goals Intructions</ion-title>
+    <ion-title class="center-title">Goals Instructions</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- Display the GoalMinder title -->
   <h1 class="goalMinder">GoalMinder</h1>
-  <div class="notebook-container">
-  <img src="../../assets/notepad.jpg" alt="Notebook Image">
-</div>
-<div class="goals-text">
-  <div class="rounded-box">
-    <p>Your goals are important,<br> and this page is dedicated to helping you achieve them.<br> Write them down and take the first step towards success!</p>
-  </div>    
-</div>
-<ion-button id="next" [routerLink]="['/goals']" expand="block" shape="round" color="danger">Got it!</ion-button>
 
+  <!-- Display an image of a notepad -->
+  <div class="notebook-container">
+    <img src="../../assets/notepad.jpg" alt="Notebook Image">
+  </div>
+
+  <div class="goals-text">
+    <div class="rounded-box">
+      <!-- Provide instructions for setting goals -->
+      <p>Your goals are important,<br> and this page is dedicated to helping you achieve them.<br> Write them down and take the first step towards success!</p>
+    </div>    
+  </div>
+
+  <!-- Button to proceed to the goals page -->
+  <ion-button id="next" [routerLink]="['/goals']" expand="block" shape="round" color="danger">Got it!</ion-button>
 </ion-content>

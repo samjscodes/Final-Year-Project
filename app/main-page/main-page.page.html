@@ -1,50 +1,67 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- Display the title "Goal Minder" in the center of the toolbar -->
     <ion-title class="center-title">Goal Minder</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="icon-container">
+    <!-- Clickable image representing the goals page -->
     <img src="../../assets/goalIcon.png" alt="goals" class="icon" (click)="goToGoalsPage()">
+
+    <!-- Clickable image representing the activities page -->
     <img src="../../assets/activities.PNG" alt="activities" class="icon" (click)="goToActivitiesPage()">
+
+    <!-- Clickable image representing the report page -->
     <img src="../../assets/report.png" alt="report" class="icon" (click)="goToReportPage()">
+
+    <!-- Clickable image representing the settings page -->
     <img src="../../assets/settings.png" alt="settings" class="icon" (click)="goToSettingsPage()">
   </div>
 
+  <!-- Display each selected hobby as an ion-item -->
   <ion-item [ngClass]="{'one-task': selectedHobbies.length === 1, 'two-tasks': selectedHobbies.length === 2, 'three-tasks': selectedHobbies.length === 3}" *ngFor="let hobby of selectedHobbies">
     <div class="cloud-container">
+      <!-- Display a cloud image -->
       <img src="../../assets/cloud.png" alt="cloud" class="cloud">
+
+      <!-- Display the hobby as a heading -->
       <h2>{{ hobby }}</h2>
+
+      <!-- Display the first task related to the hobby -->
       <p>{{ getFirstTask(hobby) }}</p>
+
+      <!-- Display a checkmark image to indicate completion of the task -->
       <img src="../../assets/check.png" class="check" (click)="goToNextTask(hobby)" />
-      <img src="../../assets/celebrating.gif" alt="celebrating gif" *ngIf="isLastTask(hobby)" (animationend)="hideCelebratingGif()" class="celebrating-gif" />
     </div>
   </ion-item>
+
+  <!-- Display the celebrating.gif when celebrating is true -->
+  <div class="celebration-container" *ngIf="isCelebrating">
+    <img src="../../assets/celebrating.gif" alt="Celebrating" class="celebration-gif">
+  </div>
+
+  <!-- Button to display a random motivational quote -->
   <button (click)="displayRandomQuote()" style="background-color: transparent;">
-    <div class="bellIcon">
+    <div class="bellIcon"> 
+      <!-- Display a bell icon image -->
       <img src="../../assets/notification.png" alt="Bell icon" style="height: 40px;">
-      </div>
+    </div>
   </button>
   
+  <!-- Display a motivational quote -->
   <div class="motivational-quote" *ngIf="displayQuote">
     <p>{{displayQuote}}</p>
   </div>
 
-  <div *ngIf="isCelebrating">
-    <img src="../../assets/celebrating.gif" alt="Celebrating" style="width: 100%; height: 100%;">
-  </div>
-   
-  
+  <!-- Button to navigate to the information page -->
   <div class="info">
     <ion-icon name="information-circle" (click)="goToInfoPage()"></ion-icon>
   </div>
 
+  <!-- Button to navigate to the tips page -->
   <div class="tips">
     <img src="../../assets/tips.png" alt="Tips icon" style="height: 40px;" (click)="goToTipsPage()">
   </div>
-
-
 </ion-content>
-
-

@@ -6,27 +6,32 @@
     <ion-title class="center-title">Login</ion-title>
   </ion-toolbar>
 
+  <!-- Login Form -->
   <ion-content class="loginForm">
     <h1 class="title">GoalMinder</h1>
     <img src="../../assets/catIcon2.gif" alt="catIcon2">
     <div class="loginWrapper">
 
+      <!-- Email Input Field -->
       <ion-item lines="none" class="input-field">
         <ion-label>Email</ion-label>
         <ion-input type="text" name="email"></ion-input>
       </ion-item>
 
+      <!-- Password Input Field -->
       <ion-item lines="none" class="input-field">
         <ion-label>Password</ion-label>
         <ion-input type="password" name="password"></ion-input>
       </ion-item>
 
+      <!-- Sign In Button -->
       <ion-button [routerLink]="['/activity-list']" expand="block" class="signin-btn" shape="round">Sign In</ion-button>
     </div>
+
+    <!-- Information Icon -->
     <div class="info-icon" (click)="appInfo()">
       <ion-icon name="information-circle-outline"></ion-icon>
     </div>   
     
   </ion-content>
-
 </ion-content>

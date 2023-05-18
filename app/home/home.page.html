@@ -1,5 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- Display the title "Home" in the center of the toolbar -->
     <ion-title class="center-title">Home</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,17 +8,25 @@
 <ion-content class="auth-form" [fullscreen]="true">
   <ion-grid>
     <ion-row>
+      <!-- Display the title "GoalMinder" -->
       <h1 class="title">GoalMinder</h1>
-      <h5 class="quote">From Goals to Habits with GoalMinder- Your path to success</h5>
+
+      <!-- Display a quote related to GoalMinder -->
+      <h5 class="quote">From Goals to Habits with GoalMinder - Your path to success</h5>
+
+      <!-- Display an image of a cat icon -->
       <img src="../../assets/catIcon1.gif" alt="catIcon1">
+
       <ion-col align-self-center>
         <div class="auth-box">
+          <!-- Button to navigate to the login page -->
           <ion-button [routerLink]="['/login']" expand="block" shape="round">Log in</ion-button>
+
+          <!-- Disabled button for signing up -->
           <ion-button disable class="signup" expand="block" shape="round">Sign up</ion-button>
         </div> 
       </ion-col>
       
     </ion-row>
   </ion-grid>
-  
 </ion-content>

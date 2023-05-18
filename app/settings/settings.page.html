@@ -1,22 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- Start button to navigate back -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <!-- Title of the page -->
     <ion-title class="center-title">Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <!-- List of settings -->
   <ion-list>
+    <!-- Volume setting -->
     <ion-item lines="none">
       <ion-label>Volume</ion-label>
+      <!-- Range input for volume control -->
       <ion-range min="0" max="1" step="0.1" [(ngModel)]="audioVolume" color="primary" (ionChange)="onVolumeChange($event)"></ion-range>
     </ion-item>
+    <!-- Audio control buttons -->
     <ion-item lines="none">
+      <!-- Button to pause audio -->
       <ion-button (click)="onPauseAudio()" shape="round" expand="block">Pause Audio</ion-button>
+      <!-- Button to play audio -->
       <ion-button (click)="onPlayAudio()" shape="round" expand="block">Play Audio</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
-

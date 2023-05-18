@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoginPage implements OnInit {
 
   constructor() { }
+
+  // Function to display app information
   appInfo() {
     alert('Welcome to GoalMinder! Please note that you can proceed without creating an account by simply clicking sign in!');
   }

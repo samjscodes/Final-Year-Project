@@ -8,14 +8,24 @@
 </ion-header>
 
 <ion-content class="goalsPage">
+  <!-- Content for the goals page -->
   <ion-content class="goals-page">
     <h1 class="goalMinder">GoalMinder</h1>
-        <div class="notepad-container">
+    
+    <!-- Container for the notepad -->
+    <div class="notepad-container">
+      <!-- Contenteditable area for user to enter goals -->
       <div class="notepad-content" contenteditable="true"></div>
+      
+      <!-- Button to save goals and proceed to the next step -->
       <ion-button expand="block" shape="round" (click)="saveGoals(); next()">Save and Next!</ion-button>
+      
+      <!-- Image of a cat -->
       <img src="../../assets/catIcon4.gif" alt="catIcon4">
-     <div class="quotes">
-    </div>    
+      
+      <!-- Container for quotes -->
+      <div class="quotes">
+      </div>    
     </div>
   </ion-content>
 </ion-content>

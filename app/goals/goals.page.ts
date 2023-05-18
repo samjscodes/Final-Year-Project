@@ -32,12 +32,14 @@ export class GoalsPage {
     private renderer: Renderer2,
     private el: ElementRef
   ) {
+    // Initialize selected hobbies based on the route parameters
     this.selectedHobbies = this.route.snapshot.paramMap.keys
       .filter(key => key.startsWith('hobby_'))
       .reduce((acc, key) => ({ ...acc, [key]: true }), {});
   }
 
   showRandomQuote() {
+    // Show a random quote from the quotes array
     const quoteElement = this.el.nativeElement.querySelector('.quote');
     const randomIndex = Math.floor(Math.random() * QUOTES.length);
     const randomQuote = QUOTES[randomIndex];
@@ -45,10 +47,11 @@ export class GoalsPage {
     this.renderer.setStyle(quoteElement, 'opacity', 1);
     setTimeout(() => {
       this.renderer.setStyle(quoteElement, 'opacity', 0);
-    }, 2000); // fade out after 2 seconds (total display time = 3 seconds)
+    }, 2000); // Fade out after 2 seconds (total display time = 3 seconds)
   }
 
   saveGoals() {
+    // Save the goals entered in the notepad to localStorage
     const notepadContent = this.el.nativeElement.querySelector(".notepad-content");
     const goals = notepadContent.textContent.trim();
     if (typeof goals === 'string') {
@@ -64,10 +67,12 @@ export class GoalsPage {
   }
 
   selectQuote(quote: string) {
+    // Select a quote from the quotes array
     this.selectedQuote = quote;
   }
 
   next() {
+    // Save goals and navigate to the main page
     this.saveGoals();
     this.navigateToMain();
   }
