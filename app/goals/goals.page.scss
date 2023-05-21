@@ -41,14 +41,21 @@ ion-content.goals-page {
 }
 
 img{
-  width: 10em;
+  width: 8em;
   position: relative;
   z-index: 1;
-  margin-left: 5.625em;
+  margin-left: 7em;
+}
+
+.tips-icon {
+  font-size: 2em;
+  margin: 0 auto;
+  display: block;
+  margin-top: -0.5em;
 }
 
 ion-button {
-  margin-top: 1.25em;
+  margin-top: 0m;
   font-family: 'Bubblegum Sans', cursive;
   --background: purple;
 }
@@ -57,61 +64,4 @@ ion-button:hover {
   --background: rgb(211, 95, 226);
 }
 
-.quotes {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-  margin-top: 10px;
-}
-
-.quote {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  font-size: 1em;
-  font-family: 'Bubblegum Sans', cursive;
-  z-index: 2;
-  color: white;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  5% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  25% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  30% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-}
-
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 

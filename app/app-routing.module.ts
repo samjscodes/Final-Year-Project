@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'tips',
     loadChildren: () => import('./tips/tips.module').then( m => m.TipsPageModule)
   },
+  {
+    path: 'goals-tips-page',
+    loadChildren: () => import('./goals-tips-page/goals-tips-page.module').then( m => m.GoalsTipsPagePageModule)
+  },
 ];
 
 @NgModule({

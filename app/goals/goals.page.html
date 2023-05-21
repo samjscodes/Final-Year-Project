@@ -14,9 +14,12 @@
     
     <!-- Container for the notepad -->
     <div class="notepad-container">
-      <!-- Contenteditable area for user to enter goals -->
+      <!-- Contenteditable area for user to emter goals -->
       <div class="notepad-content" contenteditable="true"></div>
       
+      <!-- Tips button for opening goals tips -->
+      <ion-icon name="information-circle-outline" class="tips-icon" (click)="openTipsModal()"></ion-icon>
+
       <!-- Button to save goals and proceed to the next step -->
       <ion-button expand="block" shape="round" (click)="saveGoals(); next()">Save and Next!</ion-button>
       

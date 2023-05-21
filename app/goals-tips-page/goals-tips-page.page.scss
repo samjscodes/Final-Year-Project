@@ -1,0 +1,41 @@
+.center-title {
+    text-align: center;
+  }
+
+.tips-page {
+    --background: linear-gradient(#f56bd1, #321f8e);
+    position: relative;
+    font-family: 'Bubblegum Sans', cursive;
+  }
+  
+  
+  .GoalMinder {
+    text-align: center;
+  }
+  
+  p {
+    text-align: left;
+  }
+  
+  li {
+    line-height: 1.5;
+    list-style-type: none;
+    margin-bottom: 1em;
+  }
+  
+  li strong {
+    font-weight: bold;
+  }
+  
+  li:nth-of-type(2) img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .tip-image {
+    height: 12em;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  

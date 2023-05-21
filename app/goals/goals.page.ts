@@ -1,19 +1,10 @@
 import { Component, Renderer2, ElementRef } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { GoalsTipsPagePageModule } from '../goals-tips-page/goals-tips-page.module';
+import { GoalsTipsPagePage } from '../goals-tips-page/goals-tips-page.page';
 
-const QUOTES: string[] = [
-  "Believe in yourself and all that you are!",
-  "Know that there is something inside you that is greater than any obstacle!",
-  "Success is not final, failure is not fatal!",
-  "Don't watch the clock; do what it does. Keep going.",
-  "Believe you can and you're halfway there.",
-  "Failure doesn't reset your progress",
-  "You are never too old to set another goal or to dream a new dream.",
-  "It's not all about talent. It's about dependability, consistency, and being able to improve",
-  "Start small so you get discourage and give up. Remember it is all about consistency!",
-  "Falling over does not un-run your marathon"
-];
+
 
 @Component({
   selector: 'app-goals',
@@ -22,32 +13,20 @@ const QUOTES: string[] = [
 })
 export class GoalsPage {
   selectedHobbies: { [hobby: string]: boolean } = {};
-  quotes: string[] = QUOTES;
-  selectedQuote: string | undefined;
+
   goals: string | undefined;
 
   constructor(
     private navCtrl: NavController,
     private route: ActivatedRoute,
     private renderer: Renderer2,
-    private el: ElementRef
+    private el: ElementRef,
+    private modalController: ModalController
   ) {
     // Initialize selected hobbies based on the route parameters
     this.selectedHobbies = this.route.snapshot.paramMap.keys
       .filter(key => key.startsWith('hobby_'))
       .reduce((acc, key) => ({ ...acc, [key]: true }), {});
-  }
-
-  showRandomQuote() {
-    // Show a random quote from the quotes array
-    const quoteElement = this.el.nativeElement.querySelector('.quote');
-    const randomIndex = Math.floor(Math.random() * QUOTES.length);
-    const randomQuote = QUOTES[randomIndex];
-    this.renderer.setProperty(quoteElement, 'textContent', randomQuote);
-    this.renderer.setStyle(quoteElement, 'opacity', 1);
-    setTimeout(() => {
-      this.renderer.setStyle(quoteElement, 'opacity', 0);
-    }, 2000); // Fade out after 2 seconds (total display time = 3 seconds)
   }
 
   saveGoals() {
@@ -66,11 +45,14 @@ export class GoalsPage {
     });
   }
 
-  selectQuote(quote: string) {
-    // Select a quote from the quotes array
-    this.selectedQuote = quote;
+  async openTipsModal() {
+    const modal = await this.modalController.create({
+      component: GoalsTipsPagePage,
+      cssClass: 'goals-tips-modal'
+    });
+    return await modal.present();
   }
-
+  
   next() {
     // Save goals and navigate to the main page
     this.saveGoals();

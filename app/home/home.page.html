@@ -1,10 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <!-- Display the title "Home" in the center of the toolbar -->
-    <ion-title class="center-title">Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="auth-form" [fullscreen]="true">
   <ion-grid>
     <ion-row>
@@ -24,9 +17,13 @@
 
           <!-- Disabled button for signing up -->
           <ion-button disable class="signup" expand="block" shape="round">Sign up</ion-button>
+
+          <!-- Information Icon -->
+          <div class="info-icon" (click)="appInfo()">
+            <ion-icon name="information-circle-outline"></ion-icon>
+          </div>
         </div> 
       </ion-col>
-      
     </ion-row>
   </ion-grid>
 </ion-content>

@@ -8,6 +8,11 @@ import { SharedService } from '../shared.service';
 })
 export class HomePage {
   constructor(private sharedService: SharedService) {}
+    // Function to display app information
+    appInfo() {
+      alert('Welcome to GoalMinder! Please note that you can proceed without creating an account by simply clicking sign in!');
+    }
+ 
 
   ionViewDidEnter() {
     this.sharedService.playAudio();
